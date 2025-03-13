@@ -10,7 +10,7 @@ class Loginscreen extends StatefulWidget {
 class _LoginscreenState extends State<Loginscreen> {
   bool _isPasswordFocused = false;
   final FocusNode _passwordFocusNode = FocusNode();
-  TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
   String imgpath = "assets/normal.jpg";
 
   @override
@@ -33,14 +33,14 @@ class _LoginscreenState extends State<Loginscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppBar(title: Text('Animated Panda UI')),
+      appBar: AppBar(title: Text('Login Screen')),
       body: Stack(
         children: [
           // Panda Image
           Positioned(
             top: 50,
             left: MediaQuery.of(context).size.width / 4,
-            child: Container(
+            child: SizedBox(
               width: 200,
               height: 200,
               child: AnimatedSwitcher(
